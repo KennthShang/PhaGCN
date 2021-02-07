@@ -40,17 +40,7 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 
-#try:
-#    _ = subprocess.check_call("mkdir {0}".format(out_f), shell=True)
-#except:
-#    print("folder {0} exist... cleaning dictionary".format(out_f))
-#    try:
-#        _ = subprocess.check_call("rm -rf {0}".format(out_f), shell=True)
-#        _ = subprocess.check_call("mkdir {0}".format(out_f), shell=True)
-#    except:
-#        print("Cannot clean your folder... permission denied")
-#        exit(1)
-if not os.path.exists(file_in_fn):
+sts(file_in_fn):
     _ = os.makedirs(file_in_fn)
 else:
     print("folder {0} exist... cleaning dictionary".format(file_in_fn))
@@ -63,16 +53,6 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 
-#try:
-#    _ = subprocess.check_call("mkdir {0}".format(file_in_fn), shell=True)
-#except:
-#    print("folder {0} exist... cleaning dictionary".format(file_in_fn))
-#    try:
-#        _ = subprocess.check_call("rm -rf {0}".format(file_in_fn), shell=True)
-#        _ = subprocess.check_call("mkdir {0}".format(file_in_fn), shell=True)
-#    except:
-#        print("Cannot clean your folder... permission denied")
-#        exit(1)
 if not os.path.exists(file_out_fn):
     _ = os.makedirs(file_out_fn)
 else:
@@ -86,16 +66,6 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 
-#try:
-#    _ = subprocess.check_call("mkdir {0}".format(file_out_fn), shell=True)
-#except:
-#    print("folder {0} exist... cleaning dictionary".format(file_out_fn))
-#    try:
-#        _ = subprocess.check_call("rm -rf {0}".format(file_out_fn), shell=True)
-#        _ = subprocess.check_call("mkdir {0}".format(file_out_fn), shell=True)
-#    except:
-#        print("Cannot clean your folder... permission denied")
-#        exit(1)
 
 
 ################################################################################

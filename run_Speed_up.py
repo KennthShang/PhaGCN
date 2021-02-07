@@ -62,6 +62,7 @@ for record in SeqIO.parse(args.contigs, 'fasta'):
         SeqIO.write(records, "Split_files/contig_"+str(file_id)+".fasta","fasta") 
         records = []
         file_id+=1
+        cnt = 0
     if "N" not in record.seq or "n" not in record.seq:
         if len(record.seq) > args.len:
             records.append(record)
