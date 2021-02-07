@@ -23,4 +23,6 @@ There are two parameters for the program: 1. `--contigs` is the path of your con
 
 # References
 how to cite this tool:
+```
 Jiayu Shang, Jingzhe Jiang and Yanni Sun, Bacteriophage classification for assembled contigs using Graph Convolutional Network, submitted to ISMB 2021
+```
