@@ -26,6 +26,10 @@ Here we present an example to show how to run PhaGCN. We support a file named "c
 
 There are two parameters for the program: 1. `--contigs` is the path of your contigs file. 2. `--len` is the length of the contigs you want to predict. As shown in our paper, with the length of contigs increases, the recall and precision increase. We recommend you to choose a proper length according to your needs. The default length is 8000bp. 
 
+The output file is **final_prediction.csv**. There are three column in this csv file: "contig_name, median_file_name, prediction".
+
+The given database only support prediction under the **Caudovirales** order. But you can change the database if required.
+
 # References
 how to cite this tool:
 ```
@@ -34,3 +38,6 @@ Jiayu Shang, Jingzhe Jiang and Yanni Sun, Bacteriophage classification for assem
 
 ## Supplementary information
 The supplementary file of the paper can be found in the supplementary folder.
+
+## Contact
+If you have any questions, please email us: jyshang2-c@my.cityu.edu.hk
