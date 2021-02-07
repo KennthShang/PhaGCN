@@ -10,6 +10,7 @@ PhaGCN is a GCN based model, which can learn the species masking feature via dee
 * Networkx
 * Pandas
 * [Diamond](https://github.com/bbuchfink/diamond)
+
 All these packages can be installed using Anaconda.
 
 If you want to use the gpu to accelerate the program:
