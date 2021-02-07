@@ -5,6 +5,12 @@ import Bio
 from Bio import SeqIO
 import pandas as pd
 import subprocess
+import argparse
+
+parser = argparse.ArgumentParser(description='manual to this script')
+parser.add_argument('--contigs', type=str, default = 'contigs.fa')
+parser.add_argument('--len', type=int, default=8000)
+args = parser.parse_args()
 
 
 if not os.path.exists("input"):
@@ -33,16 +39,7 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 
-#try:
-#    _ = subprocess.check_call("mkdir {0}".format("input"), shell=True)
-#except:
-#    print("folder {0} exist... cleaning dictionary".format("input"))
-#    try:
-#        _ = subprocess.check_call("rm -rf {0}".format("input"), shell=True)
-#        _ = subprocess.check_call("mkdir {0}".format("input"), shell=True)
-#    except:
-#        print("Cannot clean your folder... permission denied")
-#        exit(1)
+
 
 if not os.path.exists("Split_files"):
     _ = os.makedirs("Split_files")
@@ -56,28 +53,19 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 
-#try:
-#    _ = subprocess.check_call("mkdir {0}".format("Split_files"), shell=True)
-#except:
-#    print("folder {0} exist... cleaning dictionary".format("Split_files"))
-#    try:
-#        _ = subprocess.check_call("rm -rf {0}".format("Split_files"), shell=True)
-#        _ = subprocess.check_call("mkdir {0}".format("Split_files"), shell=True)
-#    except:
-#        print("Cannot clean your folder... permission denied")
-#        exit(1)
 
 cnt = 0
 file_id = 0
 records = []
-for record in SeqIO.parse("contigs.fa", 'fasta'):
-   if cnt !=0 and cnt%1000 == 0:
-       SeqIO.write(records, "Split_files/contig_"+str(file_id)+".fasta","fasta")
-       records = []
-       file_id+=1
-   if "N" not in record.seq or "n" not in record.seq:
-       records.append(record)
-   cnt+=1
+for record in SeqIO.parse(args.contigs, 'fasta'):
+    if cnt !=0 and cnt%1000 == 0:
+        SeqIO.write(records, "Split_files/contig_"+str(file_id)+".fasta","fasta") 
+        records = []
+        file_id+=1
+    if "N" not in record.seq or "n" not in record.seq:
+        if len(record.seq) > args.len:
+            records.append(record)
+            cnt+=1
 
 SeqIO.write(records, "Split_files/contig_"+str(file_id)+".fasta","fasta")
 file_id+=1
