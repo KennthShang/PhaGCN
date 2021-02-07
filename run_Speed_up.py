@@ -6,6 +6,7 @@ from Bio import SeqIO
 import pandas as pd
 import subprocess
 import argparse
+import re
 
 parser = argparse.ArgumentParser(description='manual to this script')
 parser.add_argument('--contigs', type=str, default = 'contigs.fa')
@@ -53,6 +54,9 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 
+def special_match(strg, search=re.compile(r'[^ACGT]').search):
+    return not bool(search(strg))
+
 
 cnt = 0
 file_id = 0
@@ -63,7 +67,10 @@ for record in SeqIO.parse(args.contigs, 'fasta'):
         records = []
         file_id+=1
         cnt = 0
-    if "N" not in record.seq or "n" not in record.seq:
+
+    seq = str(record.seq)
+    seq = seq.upper()
+    if special_match(seq):
         if len(record.seq) > args.len:
             records.append(record)
             cnt+=1
