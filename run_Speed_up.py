@@ -53,6 +53,24 @@ else:
         except:
             print("Cannot clean your folder... permission denied")
             exit(1)
+try:
+    diamond_cmd = 'diamond blastp --threads 8 --sensitive -d database/database.dmnd -q database/Caudovirales_protein.fasta -o database/database.self-diamond.tab'
+    print("Running Diamond...")
+    _ = subprocess.check_call(diamond_cmd, check=True, stdout=subprocess.PIPE)
+    diamond_out_fp = "database/database.self-diamond.tab"
+    database_abc_fp = "database/database.self-diamond.tab.abc"
+    _ = subprocess.check_call("awk '$1!=$2 {{print $1,$2,$11}}' {0} > {1}".format(diamond_out_fp, database_abc_fp), shell=True)
+    if res.returncode != 0:
+        print('Error running Diamond')
+        exit(1)
+except:
+    print("create database failed")
+    exit(1)
+
+
+#####################################################################
+##########################    Start Program  ########################
+#####################################################################
 
 def special_match(strg, search=re.compile(r'[^ACGT]').search):
     return not bool(search(strg))
