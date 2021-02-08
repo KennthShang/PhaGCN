@@ -67,7 +67,6 @@ for record in SeqIO.parse(args.contigs, 'fasta'):
         records = []
         file_id+=1
         cnt = 0
-
     seq = str(record.seq)
     seq = seq.upper()
     if special_match(seq):

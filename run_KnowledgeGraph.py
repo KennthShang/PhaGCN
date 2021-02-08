@@ -40,7 +40,7 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 
-sts(file_in_fn):
+if not os.path.exists(file_in_fn):
     _ = os.makedirs(file_in_fn)
 else:
     print("folder {0} exist... cleaning dictionary".format(file_in_fn))
