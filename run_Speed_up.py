@@ -54,7 +54,7 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 try:
-    make_diamond_cmd = ['diamond makedb --threads 8 --in database/Caudovirales_protein.fasta -d database/database.dmnd']
+    make_diamond_cmd = 'diamond makedb --threads 8 --in database/Caudovirales_protein.fasta -d database/database.dmnd'
     print("Creating Diamond database...")
     res = subprocess.run(make_diamond_cmd, check=True, stdout=subprocess.PIPE)
     if res.returncode != 0:
