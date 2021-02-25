@@ -56,10 +56,8 @@ else:
 try:
     make_diamond_cmd = 'diamond makedb --threads 8 --in database/Caudovirales_protein.fasta -d database/database.dmnd'
     print("Creating Diamond database...")
-    res = subprocess.run(make_diamond_cmd, check=True, stdout=subprocess.PIPE)
-    if res.returncode != 0:
-        print('Error creating Diamond database')
-        exit(1)
+    _ = subprocess.check_call(make_diamond_cmd, shell=True)
+    
     diamond_cmd = 'diamond blastp --threads 8 --sensitive -d database/database.dmnd -q database/Caudovirales_protein.fasta -o database/database.self-diamond.tab'
     print("Running Diamond...")
     _ = subprocess.check_call(diamond_cmd, shell=True)
