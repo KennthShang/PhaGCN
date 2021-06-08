@@ -35,7 +35,9 @@ The given database only support prediction under the **Caudovirales** order. But
 If you want to use PhaGCN, you need to take care of two things:
 1. Make sure all your contigs are virus contigs. You can separate bacteria contigs by using [VirSorter](https://github.com/simroux/VirSorter) or [DeepVirFinder](https://github.com/jessieren/DeepVirFinder)
 2. The script will pass contigs with non-ACGT characters, which means those non-ACGT contigs will be remained unpredict.
-
+3. if the program output an error (which is caused by your machine):
+`Error: mkl-service + Intel(R) MKL: MKL_THREADING_LAYER=INTEL is incompatible with libgomp.so.1 library.`
+You can type in the command `export MKL_SERVICE_FORCE_INTEL=1` before runing *run_Speed_up.py*
 
 # References
 how to cite this tool:
