@@ -21,6 +21,7 @@ If you want to use the gpu to accelerate the program:
 We recommend you to install all the package with [Anaconda](https://anaconda.org/)
 
 After cloning this respository, you can use anaconda to install the **environment.yaml**. This will install all packages you need with gpu mode (make sure you have installed cuda on your system).
+`conda env create -f environment.yaml`
 
 # Usage (example)
 Here we present an example to show how to run PhaGCN. We support a file named "contigs.fa" in the Github folder and it contain contigs simulated from E. coli phage. The only command that you need to run is `python run_Speed_up.py --contigs contigs.fa -len 8000`. 
