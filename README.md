@@ -42,11 +42,7 @@ You can type in the command `export MKL_SERVICE_FORCE_INTEL=1` before runing *ru
 # References
 how to cite this tool:
 ```
-Jiayu Shang, Jingzhe Jiang and Yanni Sun, Bacteriophage classification for assembled contigs using Graph Convolutional Network, ISMB/ECCB 2021, accepted.
-
-Or
-
-Shang, J., Jiang, J., & Sun, Y. (2021). Bacteriophage classification for assembled contigs using Graph Convolutional Network. arXiv preprint arXiv:2102.03746.
+Jiayu Shang, Jingzhe Jiang, Yanni Sun, Bacteriophage classification for assembled contigs using graph convolutional network, Bioinformatics, Volume 37, Issue Supplement_1, July 2021, Pages i25–i33, https://doi.org/10.1093/bioinformatics/btab293
 ```
 
 ## Supplementary information
