@@ -10,7 +10,6 @@ from    config import  args
 from    utils import masked_loss, masked_acc
 import  pickle as pkl
 import  scipy.sparse as sp
-from sklearn.metrics import classification_report
 
 import random
 
