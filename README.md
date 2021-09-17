@@ -26,7 +26,7 @@ After cloning this respository, you can use anaconda to install the **environmen
 # Usage (example)
 Here we present an example to show how to run PhaGCN. We support a file named "contigs.fa" in the Github folder and it contain contigs simulated from E. coli phage. The only command that you need to run is `python run_Speed_up.py --contigs contigs.fa -len 8000`. 
 
-There are two parameters for the program: 1. `--contigs` is the path of your contigs file. 2. `--len` is the length of the contigs you want to predict. As shown in our paper, with the length of contigs increases, the recall and precision increase. We recommend you to choose a proper length according to your needs. The default length is 8000bp. 
+There are two parameters for the program: 1. `--contigs` is the path of your contigs file. 2. `--len` is the length of the contigs you want to predict. As shown in our paper, with the length of contigs increases, the recall and precision increase. We recommend you to choose a proper length according to your needs. The default length is 8000bp and the minimum length is 2000bp. 
 
 The output file is **final_prediction.csv**. There are three column in this csv file: "contig_name, median_file_name, prediction".
 
