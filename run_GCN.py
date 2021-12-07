@@ -137,12 +137,14 @@ for epoch in range(args.epochs*2):
 
 net.eval()
 out = net((feature, support))
+out = F.softmax(out,dim =1)
 if torch.cuda.is_available():
     out = out.cpu().detach().numpy()
 else:
     out = out.detach().numpy()
 
 pred = np.argmax(out, axis = 1)
+score = np.max(out, axis = 1)
 
 mode = "testing"
 if mode == "validation":
@@ -160,10 +162,10 @@ pred_to_label = {0:"Ackermannviridae", 1:"Autographiviridae", 2:"Demerecviridae"
 
 
 with open("prediction.csv", 'w') as f_out:
-    _ = f_out.write("contig_names, prediction\n")
+    _ = f_out.write("contig_names,prediction,score\n")
     for key in test_to_id.keys():
         if labels[test_to_id[key]] == -1:
-            _ = f_out.write(str(key) + "," + str(pred_to_label[pred[test_to_id[key]]]) + "\n")
+            _ = f_out.write(str(key) + "," + str(pred_to_label[pred[test_to_id[key]]]) + "," + str(score[test_to_id[key]]) + "\n")
         else:
-            _ = f_out.write(str(key) + "," + str(pred_to_label[labels[test_to_id[key]]]) + "\n")
+            _ = f_out.write(str(key) + "," + str(pred_to_label[labels[test_to_id[key]]]) + "," + str(1) + "\n")
 
