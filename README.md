@@ -31,7 +31,7 @@ There are two parameters for the program: 1. `--contigs` is the path of your con
 
 The output file is **final_prediction.csv**. There are three column in this csv file: "contig_name, median_file_name, prediction".
 
-PhaGCN will only trained on the current given database. But you can change update the database if required.
+PhaGCN will only trained on the current given database. But you can update the database if required.
 
 # Notice
 If you want to use PhaGCN, you need to take care of two things:
