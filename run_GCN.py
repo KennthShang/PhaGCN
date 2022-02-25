@@ -1,9 +1,11 @@
+import  numpy as np
+
 import  torch
 from    torch import nn
 from    torch import optim
 from    torch.nn import functional as F
 
-import  numpy as np
+
 from    data import load_data, preprocess_features, preprocess_adj, sample_mask
 import  model
 from    config import  args
