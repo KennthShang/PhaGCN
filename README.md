@@ -15,14 +15,19 @@ PhaGCN is a GCN based model, which can learn the species masking feature via dee
 All these packages can be installed using Anaconda.
 
 If you want to use the gpu to accelerate the program:
-* cuda 10.1 
+* cuda  
 * Pytorch-gpu
+
+**Note:** please install the pytorch with correct cuda version corresponding to your system
 
 ## An easiler way to install
 We recommend you to install all the package with [Anaconda](https://anaconda.org/)
 
 After cloning this respository, you can use anaconda to install the **environment.yaml**. This will install all packages you need with gpu mode (make sure you have installed cuda on your system).
 `conda env create -f environment.yaml`
+
+**Note:** please install the pytorch with correct cuda version corresponding to your system, if you want to use gpu.
+
 
 # Usage (example)
 Here we present an example to show how to run PhaGCN. We support a file named "contigs.fa" in the Github folder and it contain contigs simulated from E. coli phage. The only command that you need to run is `python run_Speed_up.py --contigs contigs.fa --len 8000`. 
