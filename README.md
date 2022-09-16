@@ -42,7 +42,7 @@ PhaGCN will only trained on the current given database. But you can update the d
 
 # Notice
 If you want to use PhaGCN, you need to take care of two things:
-1. Make sure all your contigs are virus contigs. You can separate bacteria contigs by using [VirSorter](https://github.com/simroux/VirSorter) or [DeepVirFinder](https://github.com/jessieren/DeepVirFinder)
+1. Make sure all your contigs are virus contigs. You can separate bacteria contigs by using [PhaMer](https://github.com/KennthShang/PhaMer)
 2. The script will pass contigs with non-ACGT characters, which means those non-ACGT contigs will be remained unpredict.
 3. if the program output an error (which is caused by your machine):
 `Error: mkl-service + Intel(R) MKL: MKL_THREADING_LAYER=INTEL is incompatible with libgomp.so.1 library.`
