@@ -16,6 +16,13 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 
 
+
+
+parser = argparse.ArgumentParser(description='manual to this script')
+parser.add_argument('--threads', type=int, default=8)
+args = parser.parse_args()
+
+
 # Defined folder
 out_f = "out/"
 contig_in = "input/"
@@ -163,9 +170,9 @@ db_fp = "database/database.dmnd"
 diamond_out_fn = '{}.diamond.tab'.format(os.path.basename(proteins_aa_fp).rsplit('.', 1)[0])
 diamond_out_fp = os.path.join(out_f, diamond_out_fn)
 # Create database
-_ = make_diamond_db(8)
+_ = make_diamond_db(args.threads)
 # Run BLASTP
-similarity_fp = run_diamond(proteins_aa_fp, db_fp, 8, diamond_out_fp)
+similarity_fp = run_diamond(proteins_aa_fp, db_fp, args.threads, diamond_out_fp)
 
 # capture the query, referencde, e-value from diamond output
 contig_abc_fp = out_f + diamond_out_fn + ".abc"
