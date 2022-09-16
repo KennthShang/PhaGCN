@@ -11,6 +11,7 @@ import re
 parser = argparse.ArgumentParser(description='manual to this script')
 parser.add_argument('--contigs', type=str, default = 'contigs.fa')
 parser.add_argument('--len', type=int, default=8000)
+parser.add_argument('--threads', type=int, default=8)
 args = parser.parse_args()
 
 
@@ -114,7 +115,7 @@ for i in range(file_id):
         continue
         
 
-    cmd = "python run_KnowledgeGraph.py"
+    cmd = f"python run_KnowledgeGraph.py --threads {args.threads}"
     try:
         out = subprocess.check_call(cmd, shell=True)
     except:
