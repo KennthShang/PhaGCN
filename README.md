@@ -24,7 +24,9 @@ If you want to use the gpu to accelerate the program:
 We recommend you to install all the package with [Anaconda](https://anaconda.org/)
 
 After cloning this respository, you can use anaconda to install the **environment.yaml**. This will install all packages you need with gpu mode (make sure you have installed cuda on your system).
-`conda env create -f environment.yaml`
+
+      conda env create -f environment.yaml -n phagcn
+      conda activate phagcn
 
 **Note:** please install the pytorch with correct cuda version corresponding to your system, if you want to use gpu.
 
