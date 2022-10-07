@@ -3,6 +3,22 @@
 PhaGCN is a GCN based model, which can learn the species masking feature via deep learning classifier, for new Phage taxonomy classification. To use PhaGCN, you only need to input your contigs to the program.
 
 
+
+
+# NEWS!!!
+
+In the latest version of ICTV2022, many of the phage families in the previous ICTV are removed, including the Caoduvirales order. Thus, we update our program to the new ICTV2022 in a new GitHub folder: [PhaGCN_newICTV](https://github.com/KennthShang/PhaGCN_newICTV). We also tested the performance and it still remain high accuracy for the changes! Thus, feel free to use the new version if it is necessary.
+
+According to the ICTV2022, the label set is listed below:
+
+```
+'Autographiviridae', 'Straboviridae', 'Herelleviridae', 'Drexlerviridae', 'Demerecviridae', 'Peduoviridae', 'Casjensviridae', 'Schitoviridae', 'Kyanoviridae', 'Ackermannviridae', 'Rountreeviridae', 'Salasmaviridae', 'Vilmaviridae', 'Zierdtviridae', 'Mesyanzhinovviridae', 'Chaseviridae', 'Zobellviridae', 'Orlajensenviridae', 'Guelinviridae', 'Steigviridae', 'Duneviridae', 'Pachyviridae', 'Winoviridae', 'Assiduviridae', 'Suoliviridae', 'Naomviridae', 'Intestiviridae', 'Crevaviridae', 'Pervagoviridae'
+```
+Please refer to the link for futher information: [ICTV](https://ictv.global/taxonomy)
+
+
+
+
 # Required Dependencies
 * Python 3.x
 * Numpy
