@@ -55,16 +55,19 @@ else:
             print("Cannot clean your folder... permission denied")
             exit(1)
 try:
-    make_diamond_cmd = 'diamond makedb --threads 8 --in database/Caudovirales_protein.fasta -d database/database.dmnd'
-    print("Creating Diamond database...")
-    _ = subprocess.check_call(make_diamond_cmd, shell=True)
-    
-    diamond_cmd = 'diamond blastp --threads 8 --sensitive -d database/database.dmnd -q database/Caudovirales_protein.fasta -o database/database.self-diamond.tab'
-    print("Running Diamond...")
-    _ = subprocess.check_call(diamond_cmd, shell=True)
-    diamond_out_fp = "database/database.self-diamond.tab"
-    database_abc_fp = "database/database.self-diamond.tab.abc"
-    _ = subprocess.check_call("awk '$1!=$2 {{print $1,$2,$11}}' {0} > {1}".format(diamond_out_fp, database_abc_fp), shell=True)
+    if os.path.exists('database/database.self-diamond.tab'):
+        print(f'Using preformatted DIAMOND database ({diamond_db}) ...')
+    else:
+        make_diamond_cmd = 'diamond makedb --threads 8 --in database/Caudovirales_protein.fasta -d database/database.dmnd'
+        print("Creating Diamond database...")
+        _ = subprocess.check_call(make_diamond_cmd, shell=True)
+        
+        diamond_cmd = 'diamond blastp --threads 8 --sensitive -d database/database.dmnd -q database/Caudovirales_protein.fasta -o database/database.self-diamond.tab'
+        print("Running Diamond...")
+        _ = subprocess.check_call(diamond_cmd, shell=True)
+        diamond_out_fp = "database/database.self-diamond.tab"
+        database_abc_fp = "database/database.self-diamond.tab.abc"
+        _ = subprocess.check_call("awk '$1!=$2 {{print $1,$2,$11}}' {0} > {1}".format(diamond_out_fp, database_abc_fp), shell=True)
 except:
     print("create database failed")
     exit(1)
