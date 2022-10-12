@@ -8,19 +8,19 @@ def filter_reads(pos, file_name):
         for record in SeqIO.parse(pos+file_name, "fasta"):
             read = str(record.seq)
             flag = 0
-            for nucl in read:
-                if nucl == 'A':
-                    continue
-                elif nucl == 'C':
-                    continue
-                elif nucl == 'G':
-                    continue
-                elif nucl == 'T':
-                    continue
-                else:
-                    flag = 1
+            #for nucl in read:
+            #    if nucl == 'A':
+            #        continue
+            #    elif nucl == 'C':
+            #        continue
+            #    elif nucl == 'G':
+            #        continue
+            #    elif nucl == 'T':
+            #        continue
+            #    else:
+            #        flag = 1
                     #print(read)
-                    break
+            #        break
             if flag == 0:
                 SeqIO.write(record, f_out, "fasta")
                 
