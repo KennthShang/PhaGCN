@@ -1,5 +1,3 @@
-# PhaGCN
-
 <img src='phagcn_logo.png'>
 
 PhaGCN is a GCN based model, which can learn the species masking feature via deep learning classifier, for new Phage taxonomy classification. To use PhaGCN, you only need to input your contigs to the program.
