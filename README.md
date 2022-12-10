@@ -6,8 +6,9 @@ PhaGCN is a GCN based model, which can learn the species masking feature via dee
 
 
 # NEWS!!!
+1. Our web server for phage-related tasks (including phage identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [PhaBOX](https://phage.ee.cityu.edu.hk/) to use the GUI. We also provided more detailed intermediate files and visualization for further analyzation. A stand-alone version of PhaBOX is also available via [GitHub version](https://github.com/KennthShang/PhaBOX), and you can run all these tools at once. Hope you will enjoy it!
 
-In the latest version of ICTV2022, many of the phage families in the previous ICTV are removed, including the Caoduvirales order. Thus, we update our program to the new ICTV2022 in a new GitHub folder: [PhaGCN_newICTV](https://github.com/KennthShang/PhaGCN_newICTV). We also tested the performance and it still remain high accuracy for the changes! Thus, feel free to use the new version if it is necessary.
+2. In the latest version of ICTV2022, many of the phage families in the previous ICTV are removed, including the Caoduvirales order. Thus, we update our program to the new ICTV2022 in a new GitHub folder: [PhaGCN_newICTV](https://github.com/KennthShang/PhaGCN_newICTV). We also tested the performance and it still remain high accuracy for the changes! Thus, feel free to use the new version if it is necessary.
 
 According to the ICTV2022, the label set is listed below:
 
