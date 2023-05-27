@@ -9,7 +9,7 @@ PhaGCN is a GCN based model, which can learn the species masking feature via dee
 1. This folder will be no longer maintained. The program has been updated and move to (PhaBOX)[https://github.com/KennthShang/PhaBOX], which is more user-friendly. Hope you will enjoy it. Also, an idenpendent PhaGCN with latest ICTV can be found in [PhaGCN_newICTV](https://github.com/KennthShang/PhaGCN_newICTV). But we still encourage you to use PhaBOX for your convenience
 
 
-1. Our web server for phage-related tasks (including phage identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [PhaBOX](https://phage.ee.cityu.edu.hk/) to use the GUI. We also provided more detailed intermediate files and visualization for further analyzation. 
+2. Our web server for phage-related tasks (including phage identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [https://phage.ee.cityu.edu.hk/] to use the GUI. We also provided more detailed intermediate files and visualization for further analyzation. 
 
 
 
