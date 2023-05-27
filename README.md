@@ -5,37 +5,17 @@ PhaGCN is a GCN based model, which can learn the species masking feature via dee
 
 
 
-# NEWS!!!
-1. Our web server for phage-related tasks (including phage identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [PhaBOX](https://phage.ee.cityu.edu.hk/) to use the GUI. We also provided more detailed intermediate files and visualization for further analyzation. A stand-alone version of PhaBOX is also available via [GitHub version](https://github.com/KennthShang/PhaBOX), and you can run all these tools at once. Hope you will enjoy it!
+# ATTNETION!!!
+1. This folder will be no longer maintained. The program has been updated and move to (PhaBOX)[https://github.com/KennthShang/PhaBOX], which is more user-friendly. Hope you will enjoy it. Also, an idenpendent PhaGCN with latest ICTV can be found in [PhaGCN_newICTV](https://github.com/KennthShang/PhaGCN_newICTV). But we still encourage you to use PhaBOX for your convenience
 
-2. In the latest version of ICTV2022, many of the phage families in the previous ICTV are removed, including the Caoduvirales order. Thus, we update our program to the new ICTV2022 in a new GitHub folder: [PhaGCN_newICTV](https://github.com/KennthShang/PhaGCN_newICTV). We also tested the performance and it still remain high accuracy for the changes! Thus, feel free to use the new version if it is necessary.
 
-According to the ICTV2022, the label set is listed below:
+1. Our web server for phage-related tasks (including phage identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [PhaBOX](https://phage.ee.cityu.edu.hk/) to use the GUI. We also provided more detailed intermediate files and visualization for further analyzation. 
 
-```
-'Autographiviridae', 'Straboviridae', 'Herelleviridae', 'Drexlerviridae', 'Demerecviridae', 'Peduoviridae', 'Casjensviridae', 'Schitoviridae', 'Kyanoviridae', 'Ackermannviridae', 'Rountreeviridae', 'Salasmaviridae', 'Vilmaviridae', 'Zierdtviridae', 'Mesyanzhinovviridae', 'Chaseviridae', 'Zobellviridae', 'Orlajensenviridae', 'Guelinviridae', 'Steigviridae', 'Duneviridae', 'Pachyviridae', 'Winoviridae', 'Assiduviridae', 'Suoliviridae', 'Naomviridae', 'Intestiviridae', 'Crevaviridae', 'Pervagoviridae'
-```
-Please refer to the link for futher information: [ICTV](https://ictv.global/taxonomy)
 
 
 
 
 # Required Dependencies
-* Python 3.x
-* Numpy
-* Pytorch
-* Networkx
-* Pandas
-* [Diamond](https://github.com/bbuchfink/diamond)
-* MCL
-
-All these packages can be installed using Anaconda.
-
-If you want to use the gpu to accelerate the program:
-* cuda  
-* Pytorch-gpu
-
-**Note:** please install the pytorch with correct cuda version corresponding to your system
 
 ## An easiler way to install
 We recommend you to install all the package with [Anaconda](https://anaconda.org/)
@@ -45,7 +25,11 @@ After cloning this respository, you can use anaconda to install the **environmen
       conda env create -f environment.yaml -n phagcn
       conda activate phagcn
 
-**Note:** please install the pytorch with correct cuda version corresponding to your system, if you want to use gpu.
+If you want to use the gpu to accelerate the program:
+* cuda  
+* Pytorch-gpu
+
+**Note:** please install the pytorch with correct cuda version corresponding to your system
 
 
 # Usage (example)
