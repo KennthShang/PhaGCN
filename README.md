@@ -1,17 +1,13 @@
+# ATTNETION!!!
+1. The program has been updated and moved to (PhaBOX)[https://github.com/KennthShang/PhaBOX], which is more user-friendly. In the new version, PhaGCN is generalized to all kinds of viruses, more than just phages. Hope you will enjoy it. This folder will be no longer maintained. 
+
+
+2. Our web server for  viruses-related tasks (including virus identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [PhaBOX 2](https://phage.ee.cityu.edu.hk/) to use the GUI. We also provided more detailed intermediate files and visualization for further analysis. 
+
+
 <img src='phagcn_logo.png'>
 
 PhaGCN is a GCN based model, which can learn the species masking feature via deep learning classifier, for new Phage taxonomy classification. To use PhaGCN, you only need to input your contigs to the program.
-
-
-
-
-# ATTNETION!!!
-1. The program has been updated and move to (PhaBOX)[https://github.com/KennthShang/PhaBOX], which is more user-friendly. Hope you will enjoy it. Also, an idenpendent PhaGCN with latest ICTV can be found in [PhaGCN_newICTV](https://github.com/KennthShang/PhaGCN_newICTV). But we still encourage you to use PhaBOX for your convenience. This folder will be no longer maintained. 
-
-
-2. Our web server for phage-related tasks (including phage identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [https://phage.ee.cityu.edu.hk/] to use the GUI. We also provided more detailed intermediate files and visualization for further analyzation. 
-
-
 
 
 
